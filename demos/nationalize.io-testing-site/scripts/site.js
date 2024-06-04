@@ -22,6 +22,7 @@ async function getName(name){
     fetch(actualUrl)
     .then(response => response.json())
     .then(data =>{
+        console.log(data.country);
         for(let i of data.country){
             let percentage = Math.floor(i.probability * 100) + "%";
             let countryCode = i.country_id;
